@@ -1,6 +1,5 @@
 // lib/audio_service.dart
 import 'dart:async';
-import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:mic_stream/mic_stream.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -35,7 +34,7 @@ class AudioService extends ChangeNotifier {
       _statusMessage = 'Listening... play your didgeridoo!';
       notifyListeners();
 
-      final stream = await MicStream.microphone(
+      final stream = MicStream.microphone(
         sampleRate: _sampleRate,
         channelConfig: ChannelConfig.CHANNEL_IN_MONO,
         audioFormat: AudioFormat.ENCODING_PCM_16BIT,
