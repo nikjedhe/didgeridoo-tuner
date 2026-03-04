@@ -17,14 +17,3 @@ workflows:
           flutter build ios --release --no-codesign
     artifacts:
       - build/ios/iphoneos/Runner.app
-```
-
----
-
-### Step 3 — Push to GitHub
-
-In VS Code terminal run:
-```
-git add .
-git commit -m "Add codemagic config"
-git push
